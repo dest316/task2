@@ -15,8 +15,9 @@ private:
     double x = 0;
     double result;
 public:
-    Function(double x)
+    Function()
     {
+        std::cin>>x;
         if (x < 0) { x = abs(x); }
         this->x = x;
         y = (c - log(x)) / b;
@@ -30,7 +31,7 @@ public:
 
 int main()
 {
-    Function fun(0);
+    Function fun;
     fun.printResult();
     return 0;
 }
